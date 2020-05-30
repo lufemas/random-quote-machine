@@ -1,0 +1,17 @@
+html{
+    height: 100%;
+}
+
+body.body{
+    background-color: blueviolet;
+    height: 100%;
+
+}
+
+#quote-box{
+    min-width: 50vw;
+}
+
+#text{
+    max-width: 50vw;
+}

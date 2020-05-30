@@ -1,17 +1,20 @@
 'use strict'
 
-debugLog(quotes)
 
-debugLog(quotes[0].quote)
-debugLog(quotes[0].author)
 
-let rndIdx = Math.floor(Math.random() * quotes.length)
+const generateNewQuote = (e)=>{
 
-debugLog(rndIdx)
+    let rndIdx = Math.floor(Math.random() * quotes.length)
 
-$('#text').text(`"${quotes[rndIdx].quote}"`)
-$('#author').text(quotes[rndIdx].author)
 
+    $('#text').text(`"${quotes[rndIdx].quote}"`)
+    $('#author').text(quotes[rndIdx].author)
+    $('#tweet-quote').attr('href','https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="'+quotes[rndIdx].quote+'" '+quotes[rndIdx].author)
+
+}
+
+generateNewQuote()
+$('#new-quote').click(generateNewQuote)
 
 
 
